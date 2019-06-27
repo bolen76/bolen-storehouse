@@ -1,4 +1,4 @@
-package bolen.extend;
+package bolen.oop;
 
 public class Son extends Father implements Uncle{
 	public String name="java";	

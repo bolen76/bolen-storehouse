@@ -1,4 +1,4 @@
-package bolen.extend;
+package bolen.oop;
 
 public interface Uncle {
 	String name="uncle...";

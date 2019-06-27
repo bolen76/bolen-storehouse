@@ -1,4 +1,4 @@
-package bolen.extend;
+package bolen.oop;
 
 public class Father {
 	public String name="father";

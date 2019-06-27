@@ -22,15 +22,15 @@ public class JdbcUtil {
 		}
 
 		try {
-			Class.forName(prop.getProperty("driverClass"));
+			Class.forName(prop.getProperty("master.jdbc.driver"));
 		} catch (ClassNotFoundException e) {
 			throw new RuntimeException(e);
 		}
 	}
 
 	public static Connection getConnection() throws SQLException {
-		return DriverManager.getConnection(prop.getProperty("url"),
-				prop.getProperty("username"), prop.getProperty("password"));
+		return DriverManager.getConnection(prop.getProperty("master.jdbc.url"),
+				prop.getProperty("master.jdbc.username"), prop.getProperty("master.jdbc.password"));
 	}
 	
 	
