@@ -1,6 +1,6 @@
 package com.bolen.enumDemo;
 
-public enum Week {
+public  enum Week {
 	
 	Tuesday(2,"星期二"),
 	Monday(1,"星期一"),
@@ -32,5 +32,12 @@ public enum Week {
 	}
 	
 	
-	
+	private static enum Holiday{
+		Duanwu,Zhongqiu;
+		
+		
+		public static void test(){
+			
+		}
+	}
 }

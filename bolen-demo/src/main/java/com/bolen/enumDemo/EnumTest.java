@@ -1,5 +1,9 @@
 package com.bolen.enumDemo;
 
+import java.util.EnumMap;
+import java.util.EnumSet;
+import java.util.Set;
+
 import org.junit.Test;
 
 public class EnumTest {
@@ -15,5 +19,11 @@ public class EnumTest {
 		int seq = Week.Monday.getSeq();
 		System.out.println(seq);
 		
+	}
+	
+	
+	public void test02(){
+		EnumSet<Week> of = EnumSet.of(Week.Monday,Week.Tuesday,Week.Wednesday);
+		EnumMap enumMap = new EnumMap<>(Week.class);
 	}
 }
