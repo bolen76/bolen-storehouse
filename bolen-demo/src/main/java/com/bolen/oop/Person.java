@@ -1,16 +1,21 @@
 package com.bolen.oop;
 
-public class Person {
+public abstract class Person {
 	
 	static {
 		System.out.println("fs111......");
 	}
 
-	public Person() {
+	private Person() {
 		System.out.println("fc333......");
 	}
 	
 	{
 		System.out.println("fb222......");
 	}
+	
+	public static void main(String[] args) {
+		//Person person = new Person();
+	}
+	
 }

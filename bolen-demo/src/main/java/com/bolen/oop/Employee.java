@@ -1,14 +1,16 @@
 package com.bolen.oop;
 
-public class Employee extends Person{
+public class Employee 
+//extends Person
+{
 
 	static {
 		System.out.println("ss111......");
 	}
 
-	public Employee() {
+	/*public Employee() {
 		System.out.println("sc222......");
-	}
+	}*/
 	{
 		
 		System.out.println("sb333......");

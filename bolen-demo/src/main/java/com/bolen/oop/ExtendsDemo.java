@@ -1,5 +1,7 @@
 package com.bolen.oop;
 
+import com.bolen.oop.extend.Son;
+
 public class ExtendsDemo {
 
 	public static void main(String[] args) throws InterruptedException {

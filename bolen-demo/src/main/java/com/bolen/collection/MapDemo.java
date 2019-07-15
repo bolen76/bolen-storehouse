@@ -1,4 +1,4 @@
-package com.bolen.list;
+package com.bolen.collection;
 
 import java.lang.reflect.Field;
 import java.util.HashMap;
