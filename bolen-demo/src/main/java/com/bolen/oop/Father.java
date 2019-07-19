@@ -23,4 +23,11 @@ public class Father
 		System.out.println(this.name);
 		//方法有重写机制，而成员变量是没有的。
 	}
+	
+	
+	
+	public static void sMethod(){
+		
+		System.out.println("father......sMethod");
+	}
 }

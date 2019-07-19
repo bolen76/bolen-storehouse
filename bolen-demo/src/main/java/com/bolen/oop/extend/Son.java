@@ -37,4 +37,18 @@ public class Son extends Father implements Uncle{
 		Son son = new Son();
 		son.methodB();
 	}
+	
+	
+	public static void sMethod(){
+		System.out.println("son......sMethod");
+	}
+	
+	
+	public static void main(String[] args) {
+		Father fa=new Son();
+		fa.sMethod();
+		
+		Son so=new Son();
+		so.sMethod();
+	}
 }
