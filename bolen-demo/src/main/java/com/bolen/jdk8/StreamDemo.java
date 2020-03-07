@@ -13,6 +13,6 @@ public class StreamDemo {
 		primes().parallel().map(p->BigInteger.valueOf(2).pow(p.intValueExact()).subtract(BigInteger.valueOf(1)))
 		.filter(mersenne->mersenne.isProbablePrime(50))
 		.limit(20).forEach(System.out::println);
-		;
+		
 	}
 }

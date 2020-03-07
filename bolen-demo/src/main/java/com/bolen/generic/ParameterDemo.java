@@ -41,16 +41,21 @@ public class ParameterDemo {
 	
 	public static void main(String[] args) {
 		
-		Object[] pickTwo = pickTwo("hello", "world", "java");
+		Object[] pickTwo = (Object[])pickTwo("hello", "world", "java");
 		
+		String s=(String) pickTwo[0];
 		
-		Object[] arr=new Object[2];
+		String[] arr=new String[3];
+		System.out.println(pickTwo instanceof Object[]);
+		
+		System.out.println(arr instanceof Object[]);
+		/*Object[] arr=new Object[2];
 		arr[0]="hello";
 		String[] str=new String[2];
 		
 		//arr=str;
 		
 		str=(String[]) arr;
-		String[] st=(String[]) pickTwo;
+		String[] st=(String[]) pickTwo;*/
 	}
 }	
