@@ -7,8 +7,6 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.Properties;
 
-import com.alibaba.druid.pool.DruidDataSource;
-
 public class JdbcUtil {
 	private static Properties prop;
 	static {
@@ -34,8 +32,5 @@ public class JdbcUtil {
 	}
 	
 	
-	public void test01() throws SQLException{
-		DruidDataSource dataSource = new DruidDataSource();
-		Connection connection = dataSource.getConnection();
-	}
+
 }
