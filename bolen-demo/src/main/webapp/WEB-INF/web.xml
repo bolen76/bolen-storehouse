@@ -4,28 +4,7 @@
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
 	id="WebApp_ID" version="3.0">
 	<display-name>bolen-storehouse</display-name>
-	<listener>
-		<listener-class>org.springframework.web.context.ContextLoaderListener
-		</listener-class>
-	</listener>
-	<context-param>
-		<param-name>contextConfigLocation</param-name>
-		<param-value>classpath*:spring/applicationContext*.xml</param-value>
-	</context-param>
-	<servlet>
-		<servlet-name>springmvc</servlet-name>
-		<servlet-class>org.springframework.web.servlet.DispatcherServlet
-		</servlet-class>
-		<init-param>
-			<param-name>contextConfigLocation</param-name>
-			<param-value>classpath*:springMVC.xml</param-value>
-		</init-param>
-		<load-on-startup>1</load-on-startup>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>springmvc</servlet-name>
-		<url-pattern>/rest/*</url-pattern>
-	</servlet-mapping>
+	
 	<filter>
 		<filter-name>CharacterEncodingFilter</filter-name>
 		<filter-class>org.springframework.web.filter.CharacterEncodingFilter
@@ -41,7 +20,7 @@
 	</filter-mapping>
 	<servlet>
 		<servlet-name>countServlet</servlet-name>
-		<servlet-class>bolen.web.CountServlet</servlet-class>
+		<servlet-class>com.bolen.web.CountServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>countServlet</servlet-name>
@@ -49,7 +28,7 @@
 	</servlet-mapping>
 	<servlet>
 		<servlet-name>responseServlet</servlet-name>
-		<servlet-class>bolen.web.ResponseServlet</servlet-class>
+		<servlet-class>com.bolen.web.ResponseServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>responseServlet</servlet-name>
@@ -57,7 +36,7 @@
 	</servlet-mapping>
 	<servlet>
 		<servlet-name>requestServlet</servlet-name>
-		<servlet-class>bolen.web.RequestServlet</servlet-class>
+		<servlet-class>com.bolen.web.RequestServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>requestServlet</servlet-name>
@@ -65,7 +44,7 @@
 	</servlet-mapping>
 	<servlet>
 		<servlet-name>secondServlet</servlet-name>
-		<servlet-class>bolen.web.SecondServlet</servlet-class>
+		<servlet-class>com.bolen.web.SecondServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>secondServlet</servlet-name>
@@ -73,7 +52,7 @@
 	</servlet-mapping>
 	<servlet>
 		<servlet-name>sessionServlet</servlet-name>
-		<servlet-class>bolen.web.SessionServlet</servlet-class>
+		<servlet-class>com.bolen.web.SessionServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>sessionServlet</servlet-name>
@@ -93,7 +72,7 @@
 	</filter-mapping>
 	<servlet>
 		<servlet-name>uploadServlet</servlet-name>
-		<servlet-class>bolen.web.UploadServlet</servlet-class>
+		<servlet-class>com.bolen.web.UploadServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>uploadServlet</servlet-name>
@@ -101,7 +80,7 @@
 	</servlet-mapping>
 	<servlet>
 		<servlet-name>downloadServlet</servlet-name>
-		<servlet-class>bolen.web.DownloadServlet</servlet-class>
+		<servlet-class>com.bolen.web.DownloadServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>downloadServlet</servlet-name>
@@ -109,7 +88,7 @@
 	</servlet-mapping>
 	<servlet>
 		<servlet-name>ajaxServlet</servlet-name>
-		<servlet-class>bolen.web.AJAXservlet</servlet-class>
+		<servlet-class>com.bolen.web.AJAXservlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>ajaxServlet</servlet-name>
@@ -117,7 +96,7 @@
 	</servlet-mapping>
 	<servlet>
 		<servlet-name>jqueryServlet</servlet-name>
-		<servlet-class>bolen.web.JqueryServlet</servlet-class>
+		<servlet-class>com.bolen.web.JqueryServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>jqueryServlet</servlet-name>
@@ -125,7 +104,7 @@
 	</servlet-mapping>
 	<servlet>
 		<servlet-name>frameServlet</servlet-name>
-		<servlet-class>bolen.web.FrameServlet</servlet-class>
+		<servlet-class>com.bolen.web.FrameServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>frameServlet</servlet-name>

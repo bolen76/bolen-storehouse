@@ -4,6 +4,15 @@ public class Employee
 //extends Person
 {
 
+	public Employee() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public Employee(FatherBrother fatherBrother) {
+		// TODO Auto-generated constructor stub
+	}
+
 	static {
 		System.out.println("ss111......");
 	}

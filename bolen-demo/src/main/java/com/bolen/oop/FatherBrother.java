@@ -10,4 +10,6 @@ public class FatherBrother {
 		Integer height = father.height;
 		//Date date=father.birth;//同包下只有私有域不可见
 	}
+	
+	private Employee emp=new Employee(this);
 }
