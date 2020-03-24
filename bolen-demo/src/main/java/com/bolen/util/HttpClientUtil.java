@@ -46,6 +46,9 @@ public class HttpClientUtil {
 			// 判断返回状态是否为200
 			if (response.getStatusLine().getStatusCode() == 200) {
 				resultString = EntityUtils.toString(response.getEntity(), "UTF-8");
+				
+			}else {
+				System.out.println("---------------返回http状态:"+response.getStatusLine().getStatusCode());
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
