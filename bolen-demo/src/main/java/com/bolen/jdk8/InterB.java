@@ -2,12 +2,12 @@ package com.bolen.jdk8;
 
 public interface InterB {
 
-	default String methodB(){
-		
-		return "InterB--------method";
+	default void defMethod() {
+
+		System.out.println("InterB--------defMethod------" + this.toString());
 	};
-	
-	public static String methodC(){
-		return "";
+
+	public static void stm()  {
+		System.out.println("InterB-----stm");
 	}
 }
