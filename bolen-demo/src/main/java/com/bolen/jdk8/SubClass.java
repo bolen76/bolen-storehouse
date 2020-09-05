@@ -9,13 +9,18 @@ public class SubClass implements InterA, InterB {
 
 		SubClass sc = new SubClass("world");
 		sc.defMethod();
-		
-		
+
+		sc.otherMethod();
 	}
 
 	public static void stm() {
 		System.out.println("subclass stm");
+		//InterB.super.defMethod();
 
+	}
+
+	public void otherMethod() {
+		InterA.super.defMethod();
 	}
 
 	@Override
@@ -35,5 +40,4 @@ public class SubClass implements InterA, InterB {
 		return "SubClass [name=" + name + "]";
 	}
 
-	
 }

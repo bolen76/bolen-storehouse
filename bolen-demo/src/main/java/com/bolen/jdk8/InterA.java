@@ -9,7 +9,7 @@ public interface InterA {
 		System.out.println("InterA--------defMethod------" + this.toString());
 	};
 
-	static void stm() {
+	public static void stm() {
 
 		System.out.println("InterA-----stm");
 	}
