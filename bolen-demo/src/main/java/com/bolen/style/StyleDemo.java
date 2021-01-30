@@ -10,7 +10,8 @@ public class StyleDemo {
 	public static final String LOVE_LANGUAGE = "hello world";
 
 	public static String smethod(String name) {
-
+		String a = "hello";
+		int b = 10;
 		return name;
 	}
 
