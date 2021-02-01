@@ -1,8 +1,55 @@
 package com.bolen.jvm;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class OomDemo {
-	
+
 	public static void main(String[] args) {
-		System.out.println("hello wordl");
+		/*
+		 * while (true) { li.add(new long[1024][1024]); }
+		 */
+		// test();
+
+		heapProf();
+	}
+
+	public static void test() {
+		test();
+	}
+
+	public static void heapProf() {
+		int num = 1000 * 1000;
+		List<OomPo> list = new ArrayList<>();
+
+		for (int i = 0; i < num; i++) {
+			list.add(new OomPo());
+		}
+
+		for (int i = 0; i < num; i++) {
+			list.add(new OomPo("bolen", 30));
+		}
+
+		try {
+			Thread.sleep(1000 * 60 * 60);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+	private static class OomPo {
+		String name;
+		long age;
+
+		public OomPo(String name, long age) {
+			super();
+			this.name = name;
+			this.age = age;
+		}
+
+		public OomPo() {
+
+		}
 	}
 }
