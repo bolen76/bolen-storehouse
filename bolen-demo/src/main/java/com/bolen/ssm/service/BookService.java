@@ -1,11 +1,16 @@
 package com.bolen.ssm.service;
 
-import com.bolen.pojo.Book;
-
 public interface BookService {
-		
+
 	public void updateBook();
+
 	public void findBookByName(String name);
-	public void updateAndSaveBook(Book book);
-	}
-	
+
+	public void addBook1();
+
+	public void addBook2();
+
+	public void addBook3();
+
+	public void addBook4();
+}

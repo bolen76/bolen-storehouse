@@ -2,6 +2,7 @@ package com.bolen.jvm;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 public class OomDemo {
 
@@ -10,8 +11,11 @@ public class OomDemo {
 		 * while (true) { li.add(new long[1024][1024]); }
 		 */
 		// test();
+		long currentTimeMillis = System.currentTimeMillis();
+		System.out.println(System.currentTimeMillis());
 
-		heapProf();
+		UUID randomUUID = UUID.randomUUID();
+		System.out.println(randomUUID.toString());
 	}
 
 	public static void test() {

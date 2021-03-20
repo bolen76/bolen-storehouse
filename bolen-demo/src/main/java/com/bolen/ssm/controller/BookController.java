@@ -20,7 +20,6 @@ public class BookController {
 	public ModelAndView queryBooks(Book book,HttpServletRequest req) {
 		String name = req.getParameter("name");
 		System.out.println(name);
-		bookService.updateAndSaveBook(book);
 
 		ModelAndView andView = new ModelAndView();
 		andView.setViewName("springmvc.jsp");
@@ -33,5 +32,25 @@ public class BookController {
 		ModelAndView andView = new ModelAndView();
 		andView.setViewName("ssh.jsp");
 		return andView;
+	}
+	
+	@RequestMapping(value = "/addBook1")
+	public void addBook1() {
+		bookService.addBook1();
+	}
+	
+	@RequestMapping(value = "/addBook2")
+	public void addBook2() {
+		bookService.addBook2();
+	}
+	
+	@RequestMapping(value = "/addBook3")
+	public void addBook3() {
+		bookService.addBook3();
+	}
+	
+	@RequestMapping(value = "/addBook4")
+	public void addBook4() {
+		bookService.addBook4();
 	}
 }
