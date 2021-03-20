@@ -16,6 +16,8 @@ public class TransactionTestController {
 
 	/**
 	 * 研究事务的传播特性
+	 * 场景：B异常，A catch住
+	 * 结果：抛出特定异常，A,B都回滚
 	 */
 	@RequestMapping("/propagation")
 	public void propagation() {
