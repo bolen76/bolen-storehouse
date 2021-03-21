@@ -12,6 +12,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class SpringBootLaunch {
 	private static final   Logger log=LoggerFactory.getLogger(SpringBootLaunch.class);
 	public static void main(String[] args) {
+		
 		SpringApplication.run(SpringBootLaunch.class,args);
 	}
 }
