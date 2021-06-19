@@ -25,12 +25,15 @@ import com.bolen.dbUtils.JdbcUtil;
  *
  */
 public class MySqlDemo {
-
+	
+	public static void main(String[] args) throws SQLException {
+		test01();
+	}
 	@Test
-	public void test01() throws SQLException {
+	public static void test01() throws SQLException {
 		Connection conn = JdbcUtil.getConnection();
 		conn.setAutoCommit(false);
-		String sql = "INSERT INTO USER(name,sex,height,weight,birthdaty,card_id ) " + "VALUES(?,?,?,?,?,?) ";
+		String sql = "INSERT INTO USER(name,sex,height,weight,birthday,card_id ) " + "VALUES(?,?,?,?,?,?) ";
 		PreparedStatement pstm = conn.prepareStatement(sql);
 
 		
@@ -44,7 +47,7 @@ public class MySqlDemo {
 		System.out.println(zd);
 		Instant instant2 = zd.toInstant();
 		
-		for (int i = 0; i < 1000000; i++) {
+		for (int i = 0; i < 10000000; i++) {
 			pstm.setObject(1, "bolen" + "_" + i);
 			Random rd = new Random();
 			int year = rd.nextInt(100);

@@ -1,10 +1,9 @@
 package com.bolen.style;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 import java.util.ArrayList;
 import java.util.List;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 
 public class StyleDemo<E, C> {
 	private C c;
@@ -12,7 +11,7 @@ public class StyleDemo<E, C> {
 
 	private final int age = 18;
 
-	public static String WEIGHT;
+	public static String weight;
 
 	public static final String LOVE_LANGUAGE = "hello world";
 
@@ -20,7 +19,7 @@ public class StyleDemo<E, C> {
 	private List list;
 
 	public static String smethod(String name) {
-		WEIGHT = name;
+		weight = name;
 		return name;
 	}
 
@@ -32,7 +31,7 @@ public class StyleDemo<E, C> {
 		list.stream().forEach(item -> {
 			other.add(item);
 		});
-		WEIGHT = "hello";
+		weight = "hello";
 		smethod("helo");
 		this.name = "java";
 		return t;
