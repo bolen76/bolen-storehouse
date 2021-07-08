@@ -44,8 +44,6 @@ public class ZkDemo {
     private static void watch() throws InterruptedException {
         try {
             List<String> children = zkl.getChildren("/bolen", true);
-            zkl.delete();
-            zkl.ex
             for (String child : children) {
                 System.out.println(child);
             }
