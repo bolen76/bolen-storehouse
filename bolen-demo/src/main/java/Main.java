@@ -64,7 +64,7 @@ class Solution {
         ListNode behind = new ListNode(-1);
         behind.next = head;
         ListNode stub = behind;
-
+        
         while (front.next != null) {
             front = front.next;
             behind = behind.next;
