@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="NettyPro" />
+        <module name="bolen-demo" />
+        <module name="netty-demo" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="alibaba-dubbo-api" target="1.8" />
+      <module name="alibaba-dubbo-client" target="1.8" />
+      <module name="alibaba-dubbo-server" target="1.8" />
+      <module name="alibaba-nacos-config-client" target="1.8" />
+      <module name="alibaba-nacos-discovery-client-common" target="1.8" />
+      <module name="alibaba-nacos-discovery-client-feign" target="1.8" />
+      <module name="alibaba-nacos-discovery-client-resttemplate" target="1.8" />
+      <module name="alibaba-nacos-discovery-client-webclient" target="1.8" />
+      <module name="alibaba-nacos-discovery-server" target="1.8" />
+      <module name="alibaba-sentinel-annotation" target="1.8" />
+      <module name="alibaba-sentinel-dashboard-apollo" target="1.8" />
+      <module name="alibaba-sentinel-dashboard-nacos" target="1.8" />
+      <module name="alibaba-sentinel-datasource-apollo" target="1.8" />
+      <module name="alibaba-sentinel-datasource-nacos" target="1.8" />
+      <module name="alibaba-sentinel-rate-limiting" target="1.8" />
+      <module name="bolen-demo" target="1.8" />
+      <module name="bolen-nacos-client" target="1.8" />
+      <module name="bolen-nacos-demo" target="1.8" />
+      <module name="bolen-nacos-server" target="1.8" />
+      <module name="bolen-rabbitmq-consumer-1" target="1.8" />
+      <module name="bolen-rabbitmq-consumer-2" target="1.8" />
+      <module name="bolen-rabbitmq-demo" target="1.8" />
+      <module name="bolen-rabbitmq-producer" target="1.8" />
+      <module name="bolen-springcloud-gateway" target="1.8" />
+      <module name="eureka-server" target="1.8" />
+      <module name="gulimall" target="1.8" />
+      <module name="gulimall-auth-server" target="1.8" />
+      <module name="gulimall-cart" target="1.8" />
+      <module name="gulimall-common" target="1.8" />
+      <module name="gulimall-coupon" target="1.8" />
+      <module name="gulimall-gateway" target="1.8" />
+      <module name="gulimall-member" target="1.8" />
+      <module name="gulimall-order" target="1.8" />
+      <module name="gulimall-product" target="1.8" />
+      <module name="gulimall-search" target="1.8" />
+      <module name="gulimall-seckill" target="1.8" />
+      <module name="gulimall-third-party" target="1.8" />
+      <module name="gulimall-ware" target="1.8" />
+      <module name="mall-admin" target="1.8" />
+      <module name="mall-auth" target="1.8" />
+      <module name="mall-common" target="1.8" />
+      <module name="mall-demo" target="1.8" />
+      <module name="mall-gateway" target="1.8" />
+      <module name="mall-mbg" target="1.8" />
+      <module name="mall-monitor" target="1.8" />
+      <module name="mall-portal" target="1.8" />
+      <module name="mall-search" target="1.8" />
+      <module name="mall-swarm" target="1.8" />
+      <module name="nacos-address" target="1.8" />
+      <module name="nacos-all" target="1.8" />
+      <module name="nacos-api" target="6" />
+      <module name="nacos-auth" target="8" />
+      <module name="nacos-client" target="6" />
+      <module name="nacos-cmdb" target="1.8" />
+      <module name="nacos-common" target="6" />
+      <module name="nacos-config" target="1.8" />
+      <module name="nacos-consistency" target="8" />
+      <module name="nacos-console" target="1.8" />
+      <module name="nacos-core" target="8" />
+      <module name="nacos-distribution" target="1.8" />
+      <module name="nacos-example" target="1.8" />
+      <module name="nacos-istio" target="1.8" />
+      <module name="nacos-naming" target="1.8" />
+      <module name="nacos-sys" target="8" />
+      <module name="nacos-test" target="1.8" />
+      <module name="netty-demo" target="1.8" />
+      <module name="NettyPro" target="1.8" />
+      <module name="rabbitmq" target="1.8" />
+      <module name="renren-fast" target="1.8" />
+      <module name="renren-generator" target="1.8" />
+      <module name="sc-f-gateway-cloud" target="1.8" />
+      <module name="service-gateway" target="1.8" />
+      <module name="service-hi" target="1.8" />
+      <module name="spring-cloud-finchley" target="1.8" />
+      <module name="stream-consumer-self" target="1.8" />
+      <module name="stream-content-route" target="1.8" />
+      <module name="stream-delayed-message" target="1.8" />
+      <module name="stream-exception-handler-1" target="1.8" />
+      <module name="stream-exception-handler-2" target="1.8" />
+      <module name="stream-exception-handler-3" target="1.8" />
+      <module name="stream-exception-handler-4" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="alibaba-dubbo-client" options="-parameters" />
+      <module name="alibaba-dubbo-server" options="-parameters" />
+      <module name="alibaba-nacos-config-client" options="-parameters" />
+      <module name="alibaba-nacos-discovery-client-common" options="-parameters" />
+      <module name="alibaba-nacos-discovery-client-feign" options="-parameters" />
+      <module name="alibaba-nacos-discovery-client-resttemplate" options="-parameters" />
+      <module name="alibaba-nacos-discovery-client-webclient" options="-parameters" />
+      <module name="alibaba-nacos-discovery-server" options="-parameters" />
+      <module name="alibaba-sentinel-annotation" options="-parameters" />
+      <module name="alibaba-sentinel-datasource-apollo" options="-parameters" />
+      <module name="alibaba-sentinel-datasource-nacos" options="-parameters" />
+      <module name="alibaba-sentinel-rate-limiting" options="-parameters" />
+      <module name="bolen-demo" options="-parameters" />
+      <module name="bolen-rabbitmq-consumer-1" options="-parameters" />
+      <module name="bolen-rabbitmq-consumer-2" options="-parameters" />
+      <module name="bolen-rabbitmq-producer" options="-parameters" />
+      <module name="eureka-server" options="-parameters" />
+      <module name="gulimall-auth-server" options="-parameters" />
+      <module name="gulimall-cart" options="-parameters" />
+      <module name="gulimall-coupon" options="-parameters" />
+      <module name="gulimall-gateway" options="-parameters" />
+      <module name="gulimall-member" options="-parameters" />
+      <module name="gulimall-order" options="-parameters" />
+      <module name="gulimall-product" options="-parameters" />
+      <module name="gulimall-search" options="-parameters" />
+      <module name="gulimall-seckill" options="-parameters" />
+      <module name="gulimall-third-party" options="-parameters" />
+      <module name="gulimall-ware" options="-parameters" />
+      <module name="mall-admin" options="-parameters" />
+      <module name="mall-auth" options="-parameters" />
+      <module name="mall-common" options="-parameters" />
+      <module name="mall-demo" options="-parameters" />
+      <module name="mall-gateway" options="-parameters" />
+      <module name="mall-mbg" options="-parameters" />
+      <module name="mall-monitor" options="-parameters" />
+      <module name="mall-portal" options="-parameters" />
+      <module name="mall-search" options="-parameters" />
+      <module name="rabbitmq" options="-parameters" />
+      <module name="renren-fast" options="-parameters" />
+      <module name="renren-generator" options="-parameters" />
+      <module name="service-gateway" options="-parameters" />
+      <module name="service-hi" options="-parameters" />
+      <module name="stream-consumer-self" options="-parameters" />
+      <module name="stream-content-route" options="-parameters" />
+      <module name="stream-delayed-message" options="-parameters" />
+      <module name="stream-exception-handler-1" options="-parameters" />
+      <module name="stream-exception-handler-2" options="-parameters" />
+      <module name="stream-exception-handler-3" options="-parameters" />
+      <module name="stream-exception-handler-4" options="-parameters" />
+    </option>
+  </component>
+</project>
