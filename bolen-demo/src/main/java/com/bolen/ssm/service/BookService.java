@@ -1,8 +1,10 @@
 package com.bolen.ssm.service;
 
 public interface BookService {
-
-	public void updateBook();
+    
+    void deleteAndInsert();
+    
+    public void updateBook();
 
 	public void findBookByName(String name);
 

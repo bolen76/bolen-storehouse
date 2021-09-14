@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC
+    "-//mybatis.org//DTD MyBatis Generator Configuration
+    1.0//EN"
+    "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd"
+    >
+<generatorConfiguration>
+    <!-- 制定oracle的驱动包的路径 千万别放中文路径下 -->
+    <classPathEntry location="E:\Maven_repository\mysql\mysql-connector-java\8.0.13\mysql-connector-java-8.0.13.jar"/>
+    <!-- 配置数据源和生成的代码所存放的位置 -->
+    <context id="context1">
+    
+        <commentGenerator>
+            <!-- 不希望生成的注释中包含时间戳 -->
+            <property name="suppressDate" value="true"/>
+            <!-- 是否不生成注释 -->
+            <property name="suppressAllComments" value="true"/>
+            <!-- 添加 db 表中字段的注释 -->
+            <property name="addRemarkComments" value="true"/>
+        </commentGenerator>
+        <jdbcConnection
+            driverClass="com.mysql.cj.jdbc.Driver"
+            connectionURL="jdbc:mysql://localhost:3306/bolen_demo?serverTimezone=UTC&amp;nullCatalogMeansCurrent=true"
+            userId="root"
+            password="123456"
+        />
+        <javaTypeResolver>
+            <!--是否使用 bigDecimal，默认false。
+                false，把JDBC DECIMAL 和 NUMERIC 类型解析为 Integer
+                true，把JDBC DECIMAL 和 NUMERIC 类型解析为java.math.BigDecimal-->
+            <property name="forceBigDecimals" value="true"/>
+            <!--默认false
+                false，将所有 JDBC 的时间类型解析为 java.util.Date
+                true，将 JDBC 的时间类型按如下规则解析
+                    DATE	                -> java.time.LocalDate
+                    TIME	                -> java.time.LocalTime
+                    TIMESTAMP                   -> java.time.LocalDateTime
+                    TIME_WITH_TIMEZONE  	-> java.time.OffsetTime
+                    TIMESTAMP_WITH_TIMEZONE	-> java.time.OffsetDateTime
+                -->
+            <property name="useJSR310Types" value="false"/>
+        </javaTypeResolver>
+        <!-- 所生成的实体类的位置默认资源包src -->
+        <javaModelGenerator targetPackage="com.bolen.ssm.model" targetProject="E:/workspace/github/bolen-storehouse/bolen-demo/src/main/java"/>
+        <!-- 所生成的sqlMap的影射文件的位置,默认资源包src -->
+        <sqlMapGenerator targetPackage="com.bolen.ssm.mapper" targetProject="E:/workspace/github/bolen-storehouse/bolen-demo/src/main/java"/>
+        <!-- 生成mapxml对应client，也就是接口dao -->
+        <javaClientGenerator targetPackage="com.bolen.ssm.mapper"
+            targetProject="E:/workspace/github/bolen-storehouse/bolen-demo/src/main/java" type="XMLMAPPER">
+            <!-- 是否在当前路径下新加一层schema,eg：fase路径com.oop.eksp.user.model， true:com.oop.eksp.user.model.[schemaName] -->
+            <property name="enableSubPackages" value="false"/>
+        </javaClientGenerator>
+        <!-- 为哪些表生成代码 tableName:表名 schema:不用填写 -->
+        
+        <table schema="" tableName="book" enableCountByExample="false"
+            enableUpdateByExample="false" enableDeleteByExample="false"
+            enableSelectByExample="false" selectByExampleQueryId="false"
+        >
+        </table>
+    </context>
+</generatorConfiguration>

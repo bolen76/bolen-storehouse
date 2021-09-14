@@ -1,3 +1,4 @@
+/*
 package com.bolen;
 
 import org.slf4j.Logger;
@@ -15,3 +16,4 @@ public class ServletInitializer extends SpringBootServletInitializer {
         return application.sources(SpringBootLaunch.class);
     }
 }
+*/

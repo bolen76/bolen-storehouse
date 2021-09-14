@@ -7,26 +7,28 @@ import org.springframework.transaction.annotation.Transactional;
 import com.bolen.ssm.mapper.BookMapper;
 import com.bolen.ssm.model.Book;
 
+import java.math.BigDecimal;
+
 @Service
 public class ATransactionService {
-
-	@Autowired
-	BookMapper bookMapper;
-
-	@Autowired
-	BTransactionService bts;
-
-	@Transactional
-	public void insert() {
-		Book book = new Book(1, "金瓶梅", 100);
-
-		bookMapper.insert(book);
-		try {
-			bts.insert();
-		} catch (Exception ex) {
-			System.out.println("bts, exception..........");
-		}
-		//int i = 1 / 0;
-		System.out.println("ats, finished..........");
-	}
+    
+    @Autowired
+    BookMapper bookMapper;
+    
+    @Autowired
+    BTransactionService bts;
+    
+    @Transactional
+    public void insert() {
+        Book book = new Book(1, "金瓶梅", new BigDecimal(3), null, null);
+        
+        bookMapper.insert(book);
+        try {
+            bts.insert();
+        } catch (Exception ex) {
+            System.out.println("bts, exception..........");
+        }
+        //int i = 1 / 0;
+        System.out.println("ats, finished..........");
+    }
 }
