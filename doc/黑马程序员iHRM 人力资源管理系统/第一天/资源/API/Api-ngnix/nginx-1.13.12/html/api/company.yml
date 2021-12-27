@@ -1,0 +1,235 @@
+swagger: "2.0"
+info:
+  description: Company
+  version: "1.0.0"
+  title: API-Company
+host: [path_3].[path_2].
+basePath: /test
+paths:
+  /company:
+    post:
+      summary: 增加Company
+      parameters:
+      - in: body
+        name: body
+        description: Company实体
+        required: true
+        schema:
+          $ref: "#/definitions/Company"
+      responses:
+        200:
+          description: 成功
+          schema:
+            $ref: '#/definitions/ApiResponse'
+    get:
+      summary: Company全部列表
+      responses:
+        200:
+          description: 成功
+          schema: 
+            $ref: '#/definitions/ApiCompanyListResponse'
+  /company/{companyId}:
+    get:
+      summary: 根据ID查询company
+      parameters:
+        - name: companyId
+          in: path
+          description: CompanyID
+          required: true
+          type: string
+      responses:
+        200:
+          description: 成功
+          schema:
+            $ref: '#/definitions/ApiCompanyResponse'
+    put:
+      summary: 修改Company
+      parameters:
+        - name: companyId
+          in: path
+          description: CompanyID
+          required: true
+          type: string
+        - name: body
+          in: body
+          description: Company实体
+          required: true
+          schema:
+            $ref: "#/definitions/Company"
+      responses:
+        200:
+          description: 成功
+          schema:
+            $ref: '#/definitions/ApiResponse'
+    delete:
+      summary: 根据ID删除Company
+      parameters:
+        - name: companyId
+          in: path
+          description: CompanyID
+          required: true
+          type: string
+      responses:
+        200:
+          description: 成功
+          schema:
+            $ref: '#/definitions/ApiResponse'
+  /company/search:
+    post:
+      summary: 根据条件查询Company列表 
+      parameters:
+        - name: body
+          in: body
+          description: Company实体类
+          required: true
+          schema:
+            $ref: '#/definitions/Company'
+      responses:
+        200:
+          description: 成功
+          schema:
+            $ref: '#/definitions/ApiCompanyListResponse'
+  /company/search/{page}/{size}:
+    post:
+      summary: Company分页
+      parameters:
+        - name: page
+          in: path
+          description: 页码
+          required: true
+          type: integer
+          format: int32
+        - name: size
+          in: path
+          description: 页大小
+          required: true
+          type: integer
+          format: int32
+        - name: body
+          in: body
+          description: 查询条件
+          required: true
+          schema:
+            $ref: "#/definitions/Company"
+      responses:
+        200:
+          description: 查询成功
+          schema:
+            $ref: '#/definitions/ApiCompanyPageResponse'
+definitions:
+  Company:
+    type: "object"
+    properties:
+      id:
+        type: "string"        
+        description: "ID"
+      name:
+        type: "string"        
+        description: "公司名称"
+      manager_id:
+        type: "string"        
+        description: "企业登录账号ID"
+      version:
+        type: "string"        
+        description: "当前版本"
+      renewal_date:
+        type: "string"        
+        description: "续期时间"
+      expiration_date:
+        type: "string"        
+        description: "到期时间"
+      company_area:
+        type: "string"        
+        description: "公司地区"
+      company_address:
+        type: "string"        
+        description: "公司地址"
+      business_license_id:
+        type: "string"        
+        description: "营业执照-图片ID"
+      legal_representative:
+        type: "string"        
+        description: "法人代表"
+      company_phone:
+        type: "string"        
+        description: "公司电话"
+      mailbox:
+        type: "string"        
+        description: "邮箱"
+      company_size:
+        type: "string"        
+        description: "公司规模"
+      industry:
+        type: "string"        
+        description: "所属行业"
+      remarks:
+        type: "string"        
+        description: "备注"
+      audit_state:
+        type: "string"        
+        description: "审核状态"
+      state:
+        type: "string"        
+        description: "状态"
+      balance:
+        type: "string"        
+        description: "当前余额"
+      create_time:
+        type: "string"        
+        description: "创建时间"
+
+  CompanyList:
+    type: "array"
+    items: 
+      $ref: '#/definitions/Company'
+  ApiResponse:
+    type: "object"
+    properties:
+      code:
+        type: "integer"
+        format: "int32"
+      flag:
+        type: "boolean"
+      message:
+        type: "string"
+  ApiCompanyResponse:
+    type: "object"
+    properties:
+      code:
+        type: "integer"
+        format: "int32"
+      flag:
+        type: "boolean"
+      message:
+        type: "string"
+      data:
+        $ref: '#/definitions/Company'
+  ApiCompanyListResponse:
+    type: "object"
+    properties:
+      code:
+        type: "integer"
+        format: "int32"
+      flag:
+        type: "boolean"
+      message:
+        type: "string"
+      data:
+        $ref: '#/definitions/CompanyList'
+  ApiCompanyPageResponse:
+    type: "object"
+    properties:
+      code:
+        type: "integer"
+        format: "int32"
+      flag:
+        type: "boolean"
+      message:
+        type: "string"
+      data:
+        properties:
+          total:
+            type: "integer"
+            format: "int32"
+          rows:
+            $ref: '#/definitions/CompanyList'
