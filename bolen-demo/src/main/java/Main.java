@@ -1,16 +1,16 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 public class Main {
     
     public static void main(String[] args) {
         ListNode listNode = buildListNode(new Integer[] {1, 2, 3, 4, 5});
         
         Solution solution = new Solution();
-        ListNode listNode1 = solution.deleteK(5, listNode);
-        
-        while (listNode1 != null) {
-            System.out.println(listNode1.val);
-            listNode1 = listNode1.next;
-        }
-        
+        solution.bulbSwitch(5);
     }
     
     private static ListNode buildListNode(Integer[] integers) {
@@ -46,36 +46,24 @@ public class Main {
 
 class Solution {
     
-    public ListNode deleteK(int k, ListNode head) {
-        if (k <= 0) {
-            return head;
+    public int bulbSwitch(int n) {
+        boolean[] status = new boolean[n];
+        int idx = 1;
+        while (idx <= n) {
+            for (int i = idx - 1; i < n; i += idx) {
+                status[i] = !status[i];
+            }
+            idx++;
         }
-        ListNode front = new ListNode(-1);
-        front.next = head;
-        while (k > 0 && front.next != null) {
-            
-            front = front.next;
-            k--;
+        int count = 0;
+        for (int i = 0; i < n; i++) {
+            if (status[i]) {
+                count++;
+            }
         }
-        if (k > 0) {
-            return head;
-        }
-        
-        ListNode behind = new ListNode(-1);
-        behind.next = head;
-        ListNode stub = behind;
-        
-        while (front.next != null) {
-            front = front.next;
-            behind = behind.next;
-        }
-        
-        ListNode temp = behind.next;
-        behind.next = behind.next.next;
-        temp.next = null;
-        
-        return stub.next;
+        return count;
     }
+    
 }
 
 class ListNode {
@@ -83,6 +71,10 @@ class ListNode {
     int val;
     
     ListNode next;
+    
+    ListNode() {
+    
+    }
     
     ListNode(int x) {
         val = x;
