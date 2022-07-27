@@ -16,7 +16,7 @@ import java.util.UUID;
 
 import org.junit.Test;
 
-import com.bolen.dbUtils.JdbcUtil;
+import com.bolen.dbutils.JdbcUtil;
 
 /**
  * mysql研究

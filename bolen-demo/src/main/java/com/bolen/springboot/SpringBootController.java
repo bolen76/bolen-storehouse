@@ -8,7 +8,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.bolen.springboot.service.SpringBootService;
 
-@RestController
+@RestController()
+@RequestMapping("/sb")
 public class SpringBootController {
 	
 	private static final Logger log=LoggerFactory.getLogger(SpringBootController.class);

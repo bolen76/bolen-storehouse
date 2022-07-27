@@ -1,8 +1,0 @@
-    instance.setUserId(userId);
-    instance.setProcessId(idWorker.nextId()+"");
-    instance.setProcApplyTime(new Date());
-    instance.setProcessKey(processKey);
-    instance.setProcessName(processName);
-    instance.setProcessState("1");
-    String data = JSON.toJSONString(map);
-    instance.setProcData(data);
